@@ -49,7 +49,7 @@ def decision(response):
     #while loop input
     respo= input ("Would you like to use again [y/n]").lower()
     
-    if input != "y" or input != "n":
+    if input != "y" and input != "n":
         
         print("***Invalid entry***")
         
