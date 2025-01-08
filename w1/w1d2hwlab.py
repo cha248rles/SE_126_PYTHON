@@ -11,6 +11,7 @@
 #max_ppl is the max allowed people for regulations
 #amt_ppl is the amount of people that are attending a meeting
 #diff is the difference between both the amount of people attending vs max allowed
+#respo is used for the while statement 
 
 
 #imports
