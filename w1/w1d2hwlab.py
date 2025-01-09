@@ -11,7 +11,10 @@
 #max_ppl is the max allowed people for regulations
 #amt_ppl is the amount of people that are attending a meeting
 #diff is the difference between both the amount of people attending vs max allowed
-#respo is used for the while statement 
+#respo is used for the while statement to check for improper values for y and n 
+#meeting_name is used for the user to enter a meeting name
+#diff_forced_pos is used to convert the difference into a positive number
+
 
 
 #imports
