@@ -89,11 +89,11 @@ while response == "y":
     diff_forced_pos = diff*-1
     
     if diff == 0:
-            print(f"You have enough room to occupy everyone however you cannot fit anyone else. The {meeting_name} meeting is legal for fire regulations")
+            print(f"You have enough room to occupy everyone however you cannot fit anyone else. \nThe {meeting_name} meeting is legal for fire regulations")
     elif diff > 0:
             print (f"You have enough room in the {meeting_name} meeting to fit {diff} more people the meeting is legal for fire regulations")
     elif diff<0:
-            print (f"You need to remove at least {diff_forced_pos} people from the {meeting_name} meeting to make sure the room is not over filled. The meeting is currently illegal for fire regulatins")
+            print (f"You need to remove at least {diff_forced_pos} people from the {meeting_name} meeting to make sure the room is not over filled. \nThe meeting is currently illegal for fire regulations.")
     response = decision(response)
 
 
