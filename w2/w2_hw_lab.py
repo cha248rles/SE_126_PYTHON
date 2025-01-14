@@ -66,5 +66,19 @@ with open ("w2/filehandling.csv") as csvfile:
         elif brand == "GW":
             brand = "Gateway"
 
+        
+        #getting the cpu model 
+        if cpu_iteration =="i5":
+            cpu_iteration = "Intel I5"
+        elif cpu_iteration =="i7":
+            cpu_iteration == "TESTTESTTESTTEST"
 
-        print(f"{computer_type:16} {brand:3}")
+         #getting the ram amount
+        if ram =="8":
+            ram = " 8 gb"
+        elif ram == "16":
+            ram == "16 gb"
+
+
+
+        print(f"{computer_type:16} {brand:9} {cpu_iteration:3} {ram:3}")
