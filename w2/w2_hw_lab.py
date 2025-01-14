@@ -126,7 +126,7 @@ with open ("w2/filehandling.csv") as csvfile:
                 second_disk = "1TB"
 
         else:
-            second_disk = ""  #second_disk is now fully defined \
+            second_disk = ""  #second_disk is now fully defined 
             
 
         #os getting the os 
@@ -158,3 +158,4 @@ with open ("w2/filehandling.csv") as csvfile:
 
         
         print(f"{computer_type:16} {brand:9} {cpu_iteration:13} {ram:13} {first_disk:10} {no_hdd:8} {second_disk:9} {os:11} {year:3}")
+print("------------------------------------------------------------------------------------------------------") #organization 
