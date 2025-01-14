@@ -73,12 +73,42 @@ with open ("w2/filehandling.csv") as csvfile:
         elif cpu_iteration =="i7":
             cpu_iteration = "Intel I7"
 
-         #getting the ram amount
+        #getting the ram amount
         if ram =="08":
-            ram =" 8 gb"
+            ram =" 8 GB"
         elif ram == "16":
-            ram ="16 gb"
+            ram ="16 GB"
+
+        #getting 1st disk amount
+        if first_disk =="500GB":
+            first_disk ="500GB"
+        elif first_disk == "001TB":
+            first_disk ="1TB"
+
+        #getting the no hdd
+
+        if no_hdd =="1":
+            no_hdd ="1"
+        elif no_hdd == "2":
+            no_hdd ="2"
+
+
+        #trying to get second disk to work
+        if record[6] == "500GB" or record [6] == "001TB": #filtering what is read 
+
+            second_disk = record[6] # setting second_disk to record 
+
+            #changing what is displayed out
+            if second_disk == "500GB":
+                second_disk = "500GB"
+            elif second_disk == "001TB": 
+                second_disk = "1TB"
 
 
 
-        print(f"{computer_type:16} {brand:9} {cpu_iteration:13} {ram:3}")
+
+
+
+
+
+        print(f"{computer_type:16} {brand:9} {cpu_iteration:13} {ram:13} {first_disk:10} {no_hdd:9} {second_disk:3}")
