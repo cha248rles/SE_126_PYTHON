@@ -62,7 +62,7 @@ with open ("w2/filehandling.csv") as csvfile:
         if brand =="DL":
             brand = "Dell"
         elif brand == "HP":
-            brand == "HP"
+            brand = "HP"
         elif brand == "GW":
             brand = "Gateway"
 
@@ -71,14 +71,14 @@ with open ("w2/filehandling.csv") as csvfile:
         if cpu_iteration =="i5":
             cpu_iteration = "Intel I5"
         elif cpu_iteration =="i7":
-            cpu_iteration == "TESTTESTTESTTEST"
+            cpu_iteration = "Intel I7"
 
          #getting the ram amount
-        if ram =="8":
-            ram = " 8 gb"
+        if ram =="08":
+            ram =" 8 gb"
         elif ram == "16":
-            ram == "16 gb"
+            ram ="16 gb"
 
 
 
-        print(f"{computer_type:16} {brand:9} {cpu_iteration:3} {ram:3}")
+        print(f"{computer_type:16} {brand:9} {cpu_iteration:13} {ram:3}")
