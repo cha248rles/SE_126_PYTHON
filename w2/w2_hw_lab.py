@@ -10,24 +10,46 @@
 
 
 # var dictionary
-
+#name is for clear screen function
+#file is for csv file
+#record is the rows within the csv file
+#computer_type is if the device is a labtop or desktop
+#brand is the brand of the computer 
+#cpu_iteration is the model of cpu
+#ram is the amount of ram in gigabites 
+#first_disk is the amount of storage on the first disk
+#no_hdd is which hard disk drive is no answer choices are 1 and 2 
+#second_disk is the amount of storage if any in the 2nd disk 
+#os is the operating system on the computer 
+#year is the year of the computer 
 
 
 
 
 #imports
 import csv
+from os import system, name
 
 
+#functions: clear screen function
+def clear():
 
+    # for windows
+    if name == 'nt':
+        _ = system('cls')
 
-
+    # for mac and linux(here, os.name is 'posix')
+    else:
+        _ = system('clear')
 
 
 #------------------------------------Main Code-------------------------------------------
 
+clear() #clears screen
+
 #header
 print(f"{'Type':10}\t {'Brand':6}\t   {'Cpu':4} \t {'Ram':10} {'1st disk':10} {'No HDD':10} {'2nd disk':10} {'Os':10} {'Year':10}")
+print("------------------------------------------------------------------------------------------------------") #organization 
 
 #opening csv file
 
@@ -43,9 +65,8 @@ with open ("w2/filehandling.csv") as csvfile:
         ram = record[3]
         first_disk = record[4]
         no_hdd = record[5]
-        #second_disk = record[6]
-        #os = record[7]
-        #year = record[8]
+        
+
         
         
         
@@ -104,11 +125,36 @@ with open ("w2/filehandling.csv") as csvfile:
             elif second_disk == "001TB": 
                 second_disk = "1TB"
 
+        else:
+            second_disk = ""  #second_disk is now fully defined \
+            
+
+        #os getting the os 
+
+        if record[6] == "W07":
+            os = "W07"
+        elif record[6] == "W10":
+            os = "W10"
+        else:
+           os= record[7]
+        
+    
+        #getting the year 
+        if record [7] == "15":
+            year = record[7]  
+
+        elif record [7] == "16":
+            year = record[7]
+
+        elif record [7] == "17":
+            year = record[7]
+
+        elif record [7] == "18":
+            year = record[7]
+            
+        else:
+            year = record[8]
 
 
-
-
-
-
-
-        print(f"{computer_type:16} {brand:9} {cpu_iteration:13} {ram:13} {first_disk:10} {no_hdd:9} {second_disk:3}")
+        
+        print(f"{computer_type:16} {brand:9} {cpu_iteration:13} {ram:13} {first_disk:10} {no_hdd:8} {second_disk:9} {os:11} {year:3}")
