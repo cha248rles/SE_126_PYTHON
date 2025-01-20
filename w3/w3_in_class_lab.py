@@ -22,7 +22,7 @@
 #second_disk is the amount of storage if any in the 2nd disk 
 #os is the operating system on the computer 
 #year is the year of the computer 
-
+#year_checker is used to check the year of computer to see if it needs to be replaced
 
 
 
@@ -46,8 +46,15 @@ def clear():
 #------------------------------------Main Code-------------------------------------------
 
 clear() #clears screen
+#inital starting things 
+count = 0
+
+
+price_list = []
+
 
 #header
+
 print(f"{'Type':10}\t {'Brand':6}\t   {'Cpu':4} \t {'Ram':10} {'1st disk':10} {'No HDD':10} {'2nd disk':10} {'Os':10} {'Year':10}")
 print("------------------------------------------------------------------------------------------------------") #organization 
 
@@ -65,7 +72,9 @@ with open ("w2/filehandling.csv") as csvfile:
         ram = record[3]
         first_disk = record[4]
         no_hdd = record[5]
+        year_checker= record[-1]
         
+
 
         
         
@@ -136,7 +145,7 @@ with open ("w2/filehandling.csv") as csvfile:
         elif record[6] == "W10":
             os = "W10"
         else:
-           os= record[7]
+            os= record[7]
         
     
         #getting the year 
@@ -155,7 +164,33 @@ with open ("w2/filehandling.csv") as csvfile:
         else:
             year = record[8]
 
+        year_used = int (year)
 
-        
+            #output 
         print(f"{computer_type:16} {brand:9} {cpu_iteration:13} {ram:13} {first_disk:10} {no_hdd:8} {second_disk:9} {os:11} {year:3}")
+        
+        
+            # checks and adds count to everything and gets price if old
+            
+        if computer_type == "Desktop": #desktop iteration 
+            
+                count += count  #counter
+                
+                if year_used <=16:
+                    
+                    price = 2000
+
+        elif computer_type == "Labtop": #labtop iteration
+        count += count 
+                
+                if year_used <=16:
+                    
+                    price = 2000
+            
+            price_list.append(price)
+
+
+
+
+print(price_list)
 print("------------------------------------------------------------------------------------------------------") #organization 
