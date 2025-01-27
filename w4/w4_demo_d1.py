@@ -112,7 +112,104 @@ for i in range (0, len(first_Name)):
 #process list to display all data to user
 
 for i in range(0, len(first_Name)):
-    print(f"{first_Name[i]:10}    {test_1[i]:10}  {test_2[i]:10} {test_3[i]:10} {num_avg[i]:10.2f}   {let_avg [i]} ")
+    print(f"{first_Name[i]:10}  {last_Name[i]:10}  {test_1[i]:10}  {test_2[i]:10} {test_3[i]:10} {num_avg[i]:10.2f}   {let_avg [i]} ")
 
 print(f"There are {len(first_Name)} students in the file.")
+
+
+
+#search part
+
+
+print("\nwelcome to the student search program\n\n")
+
+answer = input("Would you like to start searching [y/n]").lower()
+
+while answer == "y":
+
+    #get search type from user
+
+    print("\tSEARCH MENU OPTIONS")
+
+    print("1. SEARCH by last NAME")
+
+    print("2. SEARCH by letter grade")
+
+    print("3. EXIT ")
+
+    search_type = input("Enter your search type 1-3")
+
+    if search_type == "1":
+        print("\nSEARCH BY LAST NAME")
+            #get search item from user 
+        search_name = input("ENTER LAST NAME OF THE STUDENT YOU ARE SEARCHING FOR")
+
+        found = -1 #invalid index 
+    
+        for i in range (0,len(last_Name)):
+
+                #for loop handles sequence 
+
+                if search_name.lower == last_Name[i].lower():
+                    #the if statment allows for the search part 
+                    found.append() #makes found the current index can be used later to display 
+
+    
+
+
+
+
+
+    #display results
+
+
+            
+
+
+
+
+
+    elif search_type == "2":
+        print("\nSearch by letter grade")
+
+
+    #preform search
+        search_name = input("ENTER letter grade")
+        for i in range (0,len(let_avg)):
+            
+
+            #for loop handles sequence 
+
+            if search_name.upper == let_avg[i]:
+                #the if statment allows for the search part 
+                found.append() #makes found the current index can be used later to display 
+        
+                if not found:
+                #last name has been found display data 
+                    print(f" Your search for {search_name} was found")
+                    print(f"{first_Name[found]:10} {last_Name[found]:10}   {test_1[found]:10}  {test_2[found]:10} {test_3[found]:10} {num_avg[found]:10.2f}   {let_avg [found]} ") 
+                else:
+                    for i in range(0, len(found)):
+            
+                        print(f" Your search for {search_name} was *NOT* found")
+                        print(f"{first_Name[found[i]]:10} {last_Name[found[i]]:10}   {test_1[found[i]]:10}  {test_2[found[i]]:10} {test_3[found[i]]:10} {num_avg[found[i]]:10.2f}   {let_avg [found[i]]} ") 
+
+
+
+    elif search_type == "3":
+        print("EXIT")
+        answer = "n"
+    
+    else:
+        print("ERROR ")
+
+
+    
+    #build a way out of the loop
+    answer = input("Would you like to search again [y/n]").lower()
+
+
+
+
+
 
