@@ -150,9 +150,20 @@ while answer == "y":
 
                 #for loop handles sequence 
 
-                if search_name.lower == last_Name[i].lower():
-                    #the if statment allows for the search part 
-                    found = i #makes found the current index can be used later to display 
+            if search_name.lower == last_Name[i].lower():
+                #the if statment allows for the search part 
+                found = i #makes found the current index can be used later to display 
+
+            if found != -1:
+                print(f" Your search for {search_name} was found")
+                print(f"{first_Name[found]:10} {last_Name[found]:10}   {test_1[found]:10}  {test_2[found]:10} {test_3[found]:10} {num_avg[found]:10.2f}   {let_avg [found]} ")
+            
+            else:
+                print(f" Your search for {search_name} was **NOT** found")
+                
+
+        
+    
 
     
 
@@ -190,7 +201,7 @@ while answer == "y":
                 print(f"{first_Name[found]:10} {last_Name[found]:10}   {test_1[found]:10}  {test_2[found]:10} {test_3[found]:10} {num_avg[found]:10.2f}   {let_avg [found]} ") 
             else:
                 for i in range(0, len(found)):
-            
+                
                     print(f" Your search for {search_name} was *NOT* found")
                     print(f"{first_Name[found[i]]:10} {last_Name[found[i]]:10}   {test_1[found[i]]:10}  {test_2[found[i]]:10} {test_3[found[i]]:10} {num_avg[found[i]]:10.2f}   {let_avg [found[i]]} ") 
 
@@ -207,6 +218,7 @@ while answer == "y":
     
     #build a way out of the loop
     answer = input("Would you like to search again [y/n]").lower()
+
 
 
 
