@@ -40,9 +40,15 @@ def clear():
 
 clear()
 
+first_name = []
 
+last_name = []
 
+age = []
 
+screen_name =[]
+
+house_alligence = []
 
 
 
