@@ -69,8 +69,19 @@ if found != "x":
 else:
     print(f"Your search for {search} was not found ")
 
+found = []
+
+search = input ("enter your dragon color you are looking for")
+
+for i in range(0, len(color1)):
+    if search.lower() in color1[i] or search.lower() in color2[i]:
+        found.append[i]
 
 
+if not found:
+    print(f"Your search for {search} was not found ")
 
-
+else:
+    print(f"Your search for {search} was found")
+    print(f"{dragons[found]:15} {riders[found]:30} {count[found]:3} {color1[found]:8} {color2[found]}              ")
 

@@ -15,6 +15,7 @@
 #found is used for indexing 
 #total_num is the total of the grades 
 #a and num are the local avg of a student numerically 
+#class_avg is the classes average
 
 
 
@@ -37,7 +38,7 @@ def clear():
         _ = system('clear')
 
 
-
+#calculate letter grades
 def letter(num):
 
     if num>= 90:
@@ -75,9 +76,12 @@ test_2= []
 
 test_3= []
 
-student_count = 0
-total_num = 0
+#var intialzation 
 
+student_count = 0
+
+total_num = 0
+#opens csv file
 with open ("w3/class_grades.csv") as csvfile:
 
     file = csv.reader(csvfile)
@@ -146,7 +150,7 @@ print("\nwelcome to the student search program\n\n")
 print(f"-------------------------------------------------------------------------")
 
 answer = input("Would you like to start searching [y/n]").lower()
-
+#SEARCHING PART
 while answer == "y":
 
     #get search type from user
@@ -214,7 +218,7 @@ while answer == "y":
             print(f" Your search for {search_name} was **NOT** found")
 
 
-
+#LETTER GRADE USES FOUND NOT INSTEAD OF OTHER METHOD
     elif search_type == "3":
         
         print("\nSearch by letter grade")
@@ -251,14 +255,14 @@ while answer == "y":
                 print(f"{first_Name[found[i]]:10} {last_Name[found[i]]:10}   {test_1[found[i]]:10}  {test_2[found[i]]:10} {test_3[found[i]]:10} {num_avg[found[i]]:10.2f}   {let_avg [found[i]]} ") 
 
 
-
+#exit
     elif search_type == "4":
         print("EXIT")
         answer = "n"
-    
+    #check for misinputs 
     else:
         print("ERROR ")
 
 
-
+#end of program message 
 print("Bye Have a good DAY.")
