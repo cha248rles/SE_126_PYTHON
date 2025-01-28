@@ -85,3 +85,7 @@ else:
     print(f"Your search for {search} was found")
     print(f"{dragons[found]:15} {riders[found]:30} {count[found]:3} {color1[found]:8} {color2[found]}              ")
 
+
+file = open('test.csv', 'w')
+file.write("Hello World")
+file.close()
