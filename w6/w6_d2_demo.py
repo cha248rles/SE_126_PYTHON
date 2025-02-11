@@ -58,12 +58,19 @@ def display(x, foundList, records):
     else:
         for i in range(0,records):
             print(f"{class_type[i]:8} {name[i]:10} {meaning[i]:25} {culture[i]} ")
-
-
-
-
+    
 
     print("--------------------------------------------------------------------------------\n")
+
+
+def swap(i,listName):
+    temp = listName[i]
+
+    listName[i] = listName[i + 1]
+
+    listName[i+1] = temp
+
+
         
 
 
@@ -140,7 +147,7 @@ while ans == "y":
     print("\tSEARCHING MENU")
     print("1. Search by Type")
     print("2. Search by Name")
-    print("3. Search by Menu")
+    print("3. Search by Meaning")
     print("4. Exit")
 
     search_type = input("\nHow would you like to search today? [1-4]")
@@ -175,6 +182,88 @@ while ans == "y":
 
                 display("x", found, len(found))
 
+    elif search_type == "2":
+        print(f"\nYou have chosen to search by name")
+
+        #Binary search
+
+        #BUBBLE SORT----------------------------------------
+
+        for i in range(0, len(name) - 1):#outter loop
+
+            
+
+            for index in range(0, len(name) - 1):#inner loop
+
+                
+
+                #below if statement determines the sort
+
+                #list used is the list being sorted
+
+                # > is for increasing order, < for decreasing
+
+                if(name[index] > name[index + 1]):
 
 
+                    #if above is true, swap places!
+
+                    swap(index,name)
+
+                    #swap all other values
+
+                    swap(index,class_type)
+                    swap(index,meaning)
+                    swap(index,culture)
+
+        display("x",0,len(name))
+
+
+        #binary search
+        search = input ("ENTER NAME THAT YOU ARE LOOKING FOR")
+        min = 0
+        max = len(name) -1
+        mid = int((min+max)/2)
+
+        while min < max and search != name[mid]:
+
+            if search < name[mid]:
+                max = mid-1
+            else:
+                 # search > name[mid]
+                min = mid +1
+
+            mid = int((min+max)/2)
+
+            if search == name[mid]:
+                display("x",0,len(name))
+
+            else:
+                print(f"\n Your search for {search} came up empty :[")
+
+
+                
+
+
+    elif search_type == "3":
+        print (f"\nYou have chosen to search by meaning")
+
+        search = input("Which name meaning are you looking for").lower()
+
+        found = []
+
+        for i in range(0,len(meaning)):
+            if search.lower() in meaning[i].lower():
+                found.append(i)
+        
+        if not found:
+            print(f"Sorry your search for {search} came up empty")
+
+        
+        else:
+            display("x", found, len(found))
     
+    elif search_type == "4":
+        print("NOW EXITING....")
+        ans= "n"
+
