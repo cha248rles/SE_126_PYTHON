@@ -39,8 +39,14 @@ def clear():
 
 clear()
 
+row_num = [1,2,3,4,5,6,7]
+row_seat = ["A","B","C","D"]
 
 
+def seating_chart():
+    for num in row_num:
+        
+        print(f"{num}", row_seat, )
 
 
 
