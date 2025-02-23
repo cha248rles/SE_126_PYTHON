@@ -39,6 +39,7 @@ def seating_chart():
         print(f"{row_num[i]},   {seat_A[i]},   {seat_B[i]},   {seat_C[i]},   {seat_D [i]}")
 
 def reserving_seat():
+    #used to check validity of input 
     ans_seat = "y"
     while ans_seat == "y":
         seat_val = input("Please enter your desired seat number and letter example (3C)").upper()
@@ -64,7 +65,7 @@ def reserving_seat():
             ans_seat ="y"
         else:
             ans_seat = "n"
-    
+    #set the x's in the porgram
     
     if seat_let == "A" and seat_A[row_num_user] != "X":
         seat_A[row_num_user] = "X"
@@ -100,7 +101,7 @@ def clear():
 
 
 clear()
-
+# initalizing lists
 row_num = []
 
 seat_A = []
@@ -116,6 +117,7 @@ ans = "y"
 
 ans_loop_checker = "y"
 
+#appending data 
 
 with open("w7/airplane.csv") as csvfile:
 
@@ -136,7 +138,7 @@ with open("w7/airplane.csv") as csvfile:
 
 
 
-
+#main loop 
 while ans == "y":
     
     ans_loop_checker = "y"
