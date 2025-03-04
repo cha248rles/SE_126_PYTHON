@@ -18,6 +18,8 @@
 #.wav https://stackoverflow.com/questions/2060628/reading-wav-files-in-python
 
 
+#INSTRUCTIONS 
+# pip install playsound
 #imports
 from os import system,name
 
