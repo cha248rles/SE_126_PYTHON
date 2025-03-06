@@ -154,7 +154,44 @@ while ans == "y":
 
 
     elif user_choice =="2":
-        print('t')
+        print("\nShowing all SONGS BY STREAMS")
+        #BUBBLE SORT----------------------------------------
+
+        for i in range(0, len(spotify_streams) - 1):#outer loop
+
+            
+
+            for index in range(0, len(spotify_streams) - 1):#inner loop
+
+                
+
+                #below if statement determines the sort
+
+                #list used is the list being sorted
+
+                # > is for increasing order, < for decreasing
+
+                if(int(spotify_streams[index]) < int(spotify_streams[index + 1])):
+
+
+                    #if above is true, swap places!
+
+                    swap(index,spotify_streams)
+
+                    #swap all other values
+
+                    swap(index,album)
+                    swap(index,song_name)
+                    swap(index,genre)
+                    swap(index, wav_file)
+                    swap(index,year)
+        print("-"*80)
+        print(f"{'SONG':31}  {'ALBUM':8} {'YEAR':10} {'GENRE':11} {'SPOTIFY STREAMS':10}  ")
+        
+        print("-"*80)
+        for i in range(0,len(genre)):
+            print(f"{song_name[i]:30}  {album[i]:8} {year[i]:8}  {genre[i]:13} {spotify_streams[i]:10} ")
+        print("-"*78)
         
         
     elif user_choice =="3":
