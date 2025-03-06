@@ -205,6 +205,7 @@ while ans == "y":
         
     elif user_choice =="5":
         print("t")
+        #REMINDER TO SELF DO SEQUENTIAL SEARCH THAT IS EXACT WITH .LOWER() METHOD
         
         
     elif user_choice =="6":
