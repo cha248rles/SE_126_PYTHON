@@ -195,17 +195,75 @@ while ans == "y":
         
         
     elif user_choice =="3":
-        print("t")
+        #will be used
+        found = []
+
+        #gets user input
+        search_album = input ("Please type in the ALBUM name of the OLIVA Rodrigo songs you would like to see:")
         
+        for i in range (0,len(album)):
+
+            if search_album.lower() == album[i].lower():
+
+                found.append(i)
         
+        if not found:
+            #tells user the department was not found
+            print(f" Your search for {search_album} was *NOT* found")
         
+        else:
+            #tells user the department was found 
+
+            print(f" Your search for {search_album} was found")
+            
+            for i in range(0,len(found)):
+                print(f"{song_name[found[i]]:30}  {album[found[i]]:8} {year[found[i]]:8}  {genre[found[i]]:13} {spotify_streams[found[i]]:10} ")
+            print("-"*78)
+
     elif user_choice =="4":
-        print("t")
+        #will be used
+        found = []
+
+        #gets user input
+        search_year = input ("Please type in the year of the OLIVA Rodrigo songs you would like to see:")
+        
+        for i in range (0,len(year)):
+
+            if int(search_year) == int(year[i]):
+
+                found.append(i)
+        
+        if not found:
+            #tells user the department was not found
+            print(f" Your search for {search_year} was *NOT* found")
+        
+        else:
+            #tells user the department was found 
+
+            print(f" Your search for {search_year} was found")
+            
+            for i in range(0,len(found)):
+                print(f"{song_name[found[i]]:30}  {album[found[i]]:8} {year[found[i]]:8}  {genre[found[i]]:13} {spotify_streams[found[i]]:10} ")
+            print("-"*78)
         
         
     elif user_choice =="5":
-        print("t")
+        
         #REMINDER TO SELF DO SEQUENTIAL SEARCH THAT IS EXACT WITH .LOWER() METHOD
+        
+        #will be used
+        found = -1
+        
+        #gets user input
+        search_song = input ("Please type in the song from OLIVA Rodrigo that you would like to see and hear:")
+        
+        for i in range (0,len(song_name)):
+
+            if search_song.lower() == song_name[i].lower():
+                
+                found = 
+                
+        
         
         
     elif user_choice =="6":
