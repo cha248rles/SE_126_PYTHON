@@ -208,11 +208,11 @@ while ans == "y":
                 found.append(i)
         
         if not found:
-            #tells user the department was not found
+            #tells user the option was not found
             print(f" Your search for {search_album} was *NOT* found")
         
         else:
-            #tells user the department was found 
+            #tells user the option was found 
 
             print(f" Your search for {search_album} was found")
             
@@ -234,11 +234,11 @@ while ans == "y":
                 found.append(i)
         
         if not found:
-            #tells user the department was not found
+            #tells user the option was not found
             print(f" Your search for {search_year} was *NOT* found")
         
         else:
-            #tells user the department was found 
+            #tells user the option was found 
 
             print(f" Your search for {search_year} was found")
             
@@ -252,18 +252,27 @@ while ans == "y":
         #REMINDER TO SELF DO SEQUENTIAL SEARCH THAT IS EXACT WITH .LOWER() METHOD
         
         #will be used
-        found = -1
+        found = []
         
         #gets user input
         search_song = input ("Please type in the song from OLIVA Rodrigo that you would like to see and hear:")
-        
+        print("-"*78)
         for i in range (0,len(song_name)):
 
-            if search_song.lower() == song_name[i].lower():
+            if search_song.lower() == song_name[i].lower(): #NOT CASE SEN BUT SPACE SEN
                 
-                found = 
+                found.append(i)
                 
-        
+        if not found:
+            #tells user the department was not found
+            print(f" Your search for {search_song} was *NOT* found")
+
+        else: #SHOULD ONLY EVER BE ONE OPTION 
+            for i in range(0,len(found)):
+                print(f"{song_name[found[i]]:30}  {album[found[i]]:8} {year[found[i]]:8}  {genre[found[i]]:13} {spotify_streams[found[i]]:10} ")
+                winsound.PlaySound(wav_file[found[i]], winsound.SND_FILENAME)
+                ans="y"
+
         
         
     elif user_choice =="6":
