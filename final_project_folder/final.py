@@ -6,18 +6,30 @@
 #prompt: This will be a program that allows you to sort and search for olivia rodrigo songs and allows you to play Olivia Rodrigo songs.
 
 #var library
+#temp_val is a temp value used in swap function
+#ans is used for loop control
+#song_name is the song name 
+#album is the album used 
+#spotify_streams is the amount of spotify streams the song has
+#genre is the genre of that song
+#wav_file is the wav file path used 
+#year is the year the song came out
 
 
-#tts
-#https://pypi.org/project/pyttsx3/ 
 
-#https://www.geeksforgeeks.org/convert-text-speech-python/
 
 
 
 #Questions and answers
 
-
+#How did you arrive at your Final Project Program idea?
+# After learning about how csv files worked I was listening to spotify and was wondering how easy it would by to make something similar and Olivia Rodrigo is my favorite artist so this idea just seemed natural. Also last year on spotify I listened to Olivia Rodrigo for 
+#How did you approach building this program?
+#If working in a group, include information on how work was divided and who was responsible for what
+#What did you do to test your program?
+#What was the hardest part about building this program?
+#What was the most enjoyable or fun part about building this program?
+#If you could go back and change something about the program or your approach to building it, what would you change?
 
 #imports
 from os import system,name
@@ -97,7 +109,7 @@ with open("final_project_folder/olivia_rodrigo.csv") as csvfile: #looks at data 
 
 
 while ans == "y":
-    
+    #menu
     print("WELCOME TO THE OLIVIA RODRIGO SONGS PROGRAM")
     print("HERE IS THE MENU AND OPTIONS")
     print("1.Show all songs sorted by Name")
@@ -279,15 +291,15 @@ while ans == "y":
         
         print("EXITING PROGRAM...")
         ans="n"
-        
+        #EXITS PROGRAM
     else:
-        
+        #USER INPUT CHECK 
         print("***INVALID ENTRY***")
         print("PLEASE ENTER A NUMBER 1-6")
         ans = "y"
         
 
-
+#EXIT PROMPT
 
 print("THANK YOU FOR USING THE PROGRAM HAVE A GOOD DAY :) ")
 
