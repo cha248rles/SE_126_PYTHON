@@ -23,13 +23,31 @@
 #Questions and answers
 
 #How did you arrive at your Final Project Program idea?
-# After learning about how csv files worked I was listening to spotify and was wondering how easy it would by to make something similar and Olivia Rodrigo is my favorite artist so this idea just seemed natural. Also last year on spotify I listened to Olivia Rodrigo for 
+
+# After learning about how csv files worked I was listening to spotify and was wondering how easy it would by to make something similar and Olivia Rodrigo is my favorite artist so this idea just seemed natural. Also last year on spotify I listened to Olivia Rodrigo for 15,433 minutes and was a top 0.005 percent fan.
+
+
 #How did you approach building this program?
+
+#My main concern of making the program was first figuring out how wav files work in python which is why I have the other file for figuring out how to use wav files. Then my main concern was making the main loop for the menu working after that I worked on the sequential search.
+
+
 #If working in a group, include information on how work was divided and who was responsible for what
+#Worked by myself
+
 #What did you do to test your program?
+#When testing the program I had to listen to the entire olivia rodrigo song to make sure the code ran. When testing I made sure to try out caps and different songs.
+
 #What was the hardest part about building this program?
+#The hardest part of building the program was finding a library for playing wav files at first I wanted to use playsound but I was having difficulties installing it. After a ton of research I found a build in python llibrary called winsound.
+
 #What was the most enjoyable or fun part about building this program?
+#I really liked learning how to use wav file in python because it was something I was really interested in also making a progject based off my favorite singer was great.
+
 #If you could go back and change something about the program or your approach to building it, what would you change?
+# If I could change one thing it would be how long it took me to figure out how to use wav files in python and csv files that took me a long time and I wish I could go back and find the library a lot quicker.
+
+
 
 #imports
 from os import system,name
